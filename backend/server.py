@@ -205,7 +205,7 @@ def get_password_hash(password):
     return pwd_context.hash(password)
 
 # Include all route modules
-from .routes import quran, maps, community, charity, duas, islamic_finance, volunteer, marriage
+from routes import quran, maps, community, charity, duas, islamic_finance, volunteer, marriage
 
 app.include_router(quran.router)
 app.include_router(maps.router)
