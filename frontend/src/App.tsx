@@ -187,15 +187,28 @@ const AppContent: React.FC = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-80 bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-900 border-l border-emerald-700 flex flex-col">
               <SheetHeader className="text-left mb-6 flex-shrink-0 border-b border-emerald-700 pb-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <img 
-                    src={logoImage} 
-                    alt="My Emaan Logo" 
-                    className="h-8 w-auto object-contain filter brightness-0 invert"
-                  />
-                  <SheetTitle className="text-emerald-100 text-xl">My Emaan</SheetTitle>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src={logoImage} 
+                      alt="My Emaan Logo" 
+                      className="h-8 w-auto object-contain filter brightness-0 invert"
+                    />
+                    <SheetTitle className="text-emerald-100 text-xl">My Emaan</SheetTitle>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={logout}
+                    className="text-emerald-300 hover:text-white hover:bg-emerald-600/40"
+                  >
+                    <LogOut className="w-4 h-4" />
+                  </Button>
                 </div>
-                <SheetDescription className="text-emerald-300 text-sm">Islamic Community Unity Platform</SheetDescription>
+                <div className="flex items-center justify-between">
+                  <SheetDescription className="text-emerald-300 text-sm">Islamic Community Unity Platform</SheetDescription>
+                  <div className="text-emerald-400 text-xs">Welcome, {user.full_name}</div>
+                </div>
               </SheetHeader>
               
               {/* Scrollable Menu Items with Custom Scrollbar */}
