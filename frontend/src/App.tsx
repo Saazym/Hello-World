@@ -59,11 +59,31 @@ const moreNavigation = [
   { id: 'influential-muslims', label: 'Influential Muslims', icon: Users },
 ]
 
-export default function App() {
+const AppContent: React.FC = () => {
+  const { user, logout, isLoading } = useAuth()
   const [currentPage, setCurrentPage] = useState('home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSitemapOpen, setIsSitemapOpen] = useState(false)
   const [profileData, setProfileData] = useState<any>(null)
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-white flex items-center justify-center">
+        <div className="text-center">
+          <img 
+            src={logoImage} 
+            alt="My Emaan Logo" 
+            className="h-16 w-auto mx-auto mb-4"
+          />
+          <div className="text-emerald-600">Loading...</div>
+        </div>
+      </div>
+    )
+  }
+
+  if (!user) {
+    return <LoginScreen />
+  }
 
   const navigateToPage = (pageId: string, data?: any) => {
     setCurrentPage(pageId)
