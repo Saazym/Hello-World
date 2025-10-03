@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from ..server import db, get_current_user
 from ..models import VolunteerOpportunity
