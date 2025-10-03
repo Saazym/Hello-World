@@ -301,3 +301,11 @@ const AppContent: React.FC = () => {
     </div>
   )
 }
+
+export default function App() {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
+  )
+}
