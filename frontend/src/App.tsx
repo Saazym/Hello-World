@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Button } from './components/ui/button'
 import { Badge } from './components/ui/badge'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from './components/ui/sheet'
-import { Home, BookOpen, MapPin, User, Users, GraduationCap, Shield, Heart, Sun, Menu, AlertTriangle, MessageCircle, HandHeart, DollarSign, UserPlus, ShoppingCart, TrendingUp, Grid, Sparkles, Bot, Car, CreditCard } from 'lucide-react'
-import logoImage from 'figma:asset/59574aba7471d4e7c082b728f3637a2664302b6a.png'
+import { Home, BookOpen, MapPin, User, Users, GraduationCap, Shield, Heart, Sun, Menu, AlertTriangle, MessageCircle, HandHeart, DollarSign, UserPlus, ShoppingCart, TrendingUp, Grid, Sparkles, Bot, Car, CreditCard, LogOut } from 'lucide-react'
+import logoImage from './assets/59574aba7471d4e7c082b728f3637a2664302b6a.png'
 import { SitemapMenu } from './components/SitemapMenu'
 import { HomeSection } from './components/HomeSection'
 import { EnhancedQuranSection } from './components/EnhancedQuranSection'
@@ -29,6 +29,8 @@ import { TakafulSection } from './components/TakafulSection'
 import { IslamicBankingSection } from './components/IslamicBankingSection'
 import { RunningTicker } from './components/RunningTicker'
 import { Toaster } from './components/ui/sonner'
+import { AuthProvider, useAuth } from './contexts/AuthContext'
+import { LoginScreen } from './components/LoginScreen'
 
 const navigation = [
   { id: 'home', label: 'Home', icon: Home },
