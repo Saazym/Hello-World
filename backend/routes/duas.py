@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from typing import List
 from server import db, get_current_user
-from ..models import DuaItem
+from models import DuaItem
 import uuid
 
 router = APIRouter(prefix="/api/duas", tags=["duas"])

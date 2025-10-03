@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from typing import List
 from server import db, get_current_user
-from ..models import MarriageProfile
+from models import MarriageProfile
 import uuid
 from datetime import datetime
 
